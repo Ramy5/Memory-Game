@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <!-- google fonts (poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <!-- font awsome icon -->
+  <link rel="stylesheet" href="css/all.css">
+  <!-- normalize file -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- main file css game -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- main page -->
+    <!-- start header -->
+    <header class="header">
+      <div class="player__name">
+        Welcome <span class="name"></span>
+      </div>
+      <div class="game__time">
+        Time <span class="time"></span>
+      </div>
+      <div class="game__try">
+        Tries <span class="try"></span>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start game container -->
+    <main class="game__container"></main>
+    <!-- end game container -->
+
+    <!-- start page for popups -->
+    <!-- popup for start game -->
+    <div class="start__game">
+      <form action="">
+        <!-- select option -->
+        <select name="levels" class="select__level">
+          <option class="easy" value="easy">Easy</option>
+          <option class="normal" value="normal" selected>Normal</option>
+          <option class="hard" value="hard">Hard</option>
+        </select>
+        <!-- player name -->
+        <input class="input__name" type="text" name="name" placeholder="First Name" maxlength="10">
+        <!-- start play button -->
+        <button class="start__btn">Start Play</button>
+      </form>
+    </div>
+
+    <!-- popup for win or lose -->
+    <div class="end__game hidden">
+      <span class="close">X</span>
+      <div class="result"></div>
+      <button class="again">Play Again!</button>
+    </div>
+    <!-- end page for popups -->
+  </div>
+
+  <!-- for sounds -->
+  <audio id="click" src="sounds/click.wav" preload="auto"></audio>
+  <audio id="correct" src="sounds/correct.wav" preload="auto"></audio>
+  <audio id="start" src="sounds/start.mp3" preload="auto"></audio>
+  <audio id="win" src="sounds/win.mp3" preload="auto"></audio>
+  <audio id="lose" src="sounds/lose.mp3" preload="auto"></audio>
+
+  <!-- font awesome icon -->
+  <script src="js/all.js"></script>
+  <!-- main js file game -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
